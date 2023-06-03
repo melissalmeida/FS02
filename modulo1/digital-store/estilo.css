@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    /* outline: 1px solid red;
+    outline-offset: -1px; */
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+:root{
+    --primary: #C92071;
+    --primary10: #C9207110;
+    --primary50: #C9207150;
+    --secundary: #B5B6F2;
+    --tertiary: #991956;
+    --error: #EE4266;
+    --success: #52CA76;
+    --warning: #F6AA1C; 
+}
+
+header{
+    padding: 34px 104px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+header .logo{
+    margin-right: 27px;
+}
+header .pesquisa{
+    flex: 1;
+    margin-right: 48px;
+    height: 60px;
+    background: #47474715;
+    border-radius: 8px;
+}
+header nav{
+    width: 100%;
+    margin-top: 40px;
+}
+header nav ul{
+    display: flex;
+    gap: 32px;
+}
+header nav ul li a{
+    color: #474747;
+}
+header nav ul li a.active{
+    color: var(--primary);
+    font-weight: bold;
+}
+
+#colecoes{
+    padding: 0 104px;
+    margin-bottom: 100px;
+}
+#colecoes h3{
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+#colecoes ul{
+    display: flex;
+    gap: 12px;
+}
+#colecoes ul li{
+    flex: 1;
+    background-color: var(--secundary);
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 8px;
+    overflow: hidden;
+}
+#colecoes ul li .conteudo{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 30px;
+}
+#colecoes ul li .conteudo span{
+    margin-bottom: 10px;
+}
+#colecoes ul li .conteudo h4{
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+#colecoes ul li img{
+    display: block;
+    height: 200px;
+}
+
+#produtos{
+    padding: 50px 104px 100px 104px;
+    background-color: #e5e5e5;
+}
+#produtos h3{
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+#produtos h3 a{
+    font-size: 18px;
+    line-height: 34px;
+    letter-spacing: .75px;
+    font-weight: normal;
+    color: var(--primary);
+}
+#produtos ul{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+#produtos ul li{
+    width: calc(25% - 18px);
+}
+#produtos ul li .image{
+    background-color: #FFF;
+    border-radius: 4px;
+    box-shadow: 6px 16px 30px #69626225;
+    overflow: hidden;
+}
+#produtos ul li .image img{
+    width: 100%;
+    display: block;
+    padding: 0 16px;
+    transform: rotate(25deg);
+}
