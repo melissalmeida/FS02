@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition-duration: 200ms;
+    animation: proLado linear infinite 4s;
+    position: absolute;
+}
+
+@keyframes proLado {
+    0%{
+        left: 0;
+        top: 0;
+    }
+    24%{
+        background-color: red;
+    }
+    25%{
+        left: calc(100% - 100px);
+        top: 0;
+        background-color: blue;
+    }
+    49%{
+        background-color: blue;
+    }
+    50%{
+        left: calc(100% - 100px);
+        top: calc(100% - 100px);
+        background-color: black;
+    }
+    75%{
+        top: calc(100% - 100px);
+        left: 0;
+    }
+    100%{
+        left: 0;
+        top: 0;
+    }
+}
