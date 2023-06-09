@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+footer{
+    background-image: linear-gradient(135deg, #69727b, #3c4c5a);
+    padding: 60px 120px;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+footer > div{
+    flex: 1; /* dividiu igualmente pros filhos de footer */
+}
+
+footer > div:last-child{
+    flex: initial; /* pra não obedecer o flex wrap */
+    width: 100%;
+    text-align: right;
+}
+
+footer h2{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+footer p{
+    font-size: 14px;
+    color: white;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+footer div:first-child ul{
+    display: flex;
+    gap: 16px;
+}
+
+footer div:first-child ul a{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: white;
+    border: 2px solid white;
+    font: 20px;
+    display: block;
+    border-radius: 25px;
+    position: relative;
+    overflow: hidden;
+}
+
+footer div:first-child ul a::after{
+    content: "";
+    width: 20px;
+    height: 50px;
+    background-color: #FFFFFF50;
+    position: absolute;
+    top: 0;
+    left: -50px;
+    transform: skewX(35deg);
+    transform-origin: top left;
+}
+
+footer div:first-child ul a:hover::after{
+    transition-duration: 400ms;
+    left: 50px;
+}
+
+footer h5{
+    font-size: 18px;
+    color: white;
+    margin-bottom: 16px;
+}
+
+footer > div:nth-child(2) a{
+    line-height: 30px;
+    color: #FFFFFF50;
+    transition-duration: 300ms;
+    display: block;
+}
+
+footer > div:nth-child(2) a:hover{
+    color: white;
+    padding-left: 16px;
+}
+
+footer .newsletter{
+    position: relative;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+footer .newsletter input{
+    height: 60px;
+    padding-left: 10px;
+    width: 100%;
+    border: 2px solid #FFFFFF50;
+    color: white;
+    border-radius: 5px;
+    background-color: transparent;
+    transition-duration: 300ms;
+    z-index: 1;
+}
+
+footer .newsletter input:focus{
+    outline: none;
+    border-color: #FFF;
+}
+
+footer .newsletter button{
+    width: 50px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+footer .newsletter button i{
+    font-size: 24px;
+    color: white;
+}
+
+footer .newsletter span{
+    position: absolute;
+    font-size: 16px;
+    color: #FFFFFF50;
+    left: 18px;
+    transition-duration: 200ms;
+}
+
+footer .newsletter input:focus + span{
+    transform: translateY(-16px);
+    font-size: 12px;
+    left: 6px;
+    color: #FFF;
+}
+
+footer div h6{
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+}
+
+header{
+    border: 1 px solid blue;
+    height: 50px;
+}
+
+main{
+    border: 1px solid red;
+    height: 1000px;
+}
+
+.voltar{
+    width: 50px;
+    height: 50px;
+    background-color: #ffdd00df;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    border-radius: 25px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 24px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: 300ms;
+}
+
+.voltar:active{
+    opacity: 1;
+    visibility: visible;
+}

@@ -1,0 +1,60 @@
+*{ /* resetando propriedade do site */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #DEDEDE;
+    padding: 100px;
+}
+
+h2{
+    width: 50%;
+    margin-bottom: 26px;
+    position: relative;
+}
+
+h2::after{ /* pseudo elemento que obedece h2, por isso, usa h2::after */
+    content: ""; /* pra que o pseudo elemento exista precisa de um content com aspas vazias, se não, ele não aparece na tela */
+    width: 100px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #000000; /* até aqui não aparece, pois, pseudo elementos precisam ser posicionados */
+    background-image: linear-gradient(90deg,blueviolet,pink); /* deg - degrees */
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+}
+
+table{
+    width: 100%;
+    background-color: #ffffff;
+    border-collapse: collapse; /* retirar as bordas da tabela inteira */
+    border-radius: 10px;
+}
+
+thead{
+    background-color: #000000;
+    color: #ffffff;
+    height: 50px;
+}
+
+td{
+    height: 40px; /* altura dos dados da tabela */
+    padding-left: 10px; /* espaçamento da esquerda dentro da tabela */
+    border-bottom: 1px solid #DEDEDE; /*inserir bordar inferior */
+    border-left: 1px solid #DEDEDE; /* se quiser por borda lateral na tabela */
+}
+
+/* .escura{ coloca .escura pra encontrar o rótulo que foi dado
+    background-color: #EDEDED;
+} */
+
+tbody tr:nth-child(even){ /* odd são os ímpares em inglês; even par em inglês */
+    background-color: #EDEDED;
+}
+
+/* tbody tr td:nth-child(odd){  caso quisesse pegar só nas colunar, era só referenciar tbody tr td
+    background-color: #EDEDED;
+} */
